@@ -1,0 +1,23 @@
+<form [formGroup]="form" (ngSubmit)="guardar($event)" class="h-screen px-2">
+  <div class=" py-3 h-80 mt-10 bg-white">
+    <div class="mb-6">
+      <label class="block text-gray-800 font-bold">Placa</label>
+      <input formControlName="placa" type="text" placeholder="MJB15F" class="w-full border border-gray-300 py-2 pl-3 rounded mt-2 outline-none focus:ring-indigo-600 :ring-indigo-600" />
+    </div>
+    <div class="mb-6">
+      <label class="block text-gray-800 font-bold">Nombre</label>
+      <input formControlName="conductor" type="text" placeholder="Opcional" class="w-full border border-gray-300 py-2 pl-3 rounded mt-2 outline-none focus:ring-indigo-600 :ring-indigo-600" />
+    </div>
+    <div class="mb-6">
+      <label class="block text-gray-800 font-bold">Empresa</label>
+      <input formControlName="empresa" type="text" placeholder="Opcional" class="w-full border border-gray-300 py-2 pl-3 rounded mt-2 outline-none focus:ring-indigo-600 :ring-indigo-600" />
+    </div>
+    <div>
+      <label class="block text-gray-800 font-bold">Ciudad</label>
+      <input formControlName="ciudad" type="text" placeholder="Manizales" class="w-full border border-gray-300 py-2 pl-3 rounded mt-2 outline-none focus:ring-indigo-600 :ring-indigo-600" />
+    </div>
+    <button [disabled]="form.invalid" [ngClass]="form.valid ? 'bg-blue-600 text-gray-200' : 'bg-gray-200 text-black'" class="cursor-pointer py-2 px-4 block mt-6 font-bold w-full text-center rounded">Guardar</button>
+    <button type="button" routerLink="/inicio" class="cursor-pointer py-2 px-4 block mt-2 text-gray-400 font-bold w-full text-center rounded">Cancelar</button>
+
+  </div>
+</form>

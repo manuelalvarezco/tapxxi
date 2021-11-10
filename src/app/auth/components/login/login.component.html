@@ -1,0 +1,21 @@
+<form [formGroup]="form" (ngSubmit)="login($event)" class="w-full h-screen flex mt-20 justify-center">
+  <div class=" w-96 h-auto pb-8 px-8 flex flex-col items-center">
+      <input formControlName="email" type="email" class="w-full h-12 px-4 text-lg focus:ring-blue-600 mb-4" placeholder="Correo"/>
+      <input formControlName="password" type="password" class="w-full h-12 px-4 text-lg focus:ring-blue-600 mb-4" placeholder="Conraseña"/>
+      <button [disabled]="form.invalid" [ngClass]="form.valid ? 'bg-blue-600 text-gray-200' : 'bg-gray-200 text-black'" class="w-full h-12  uppercase font-semibold transition mb-4">Registrarme</button>
+      <label class="text-gray-800 mb-4">o</label>
+      <button type="button" class="w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 px-4 py-3">
+        <div class="flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-6 h-6" viewBox="0 0 48 48"><defs><path id="a" d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z"/></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"/></clipPath><path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z"/><path clip-path="url(#b)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z"/><path clip-path="url(#b)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z"/><path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z"/></svg>
+          <span class="ml-4"> Registrarme con Google</span>
+        </div>
+      </button>
+      <button type="button" class="w-full text-blue-900 block hover:bg-gray-100 bg-white hover:border-blue-700 focus:bg-blue-700 px-4 py-3">
+        <div class="flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="w-5" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-92.4 233.5h-63.9c-50.1 0-59.8 23.8-59.8 58.8v77.1h119.6l-15.6 120.7h-104V912H539.2V602.2H434.9V481.4h104.3v-89c0-103.3 63.1-159.6 155.3-159.6c44.2 0 82.1 3.3 93.2 4.8v107.9z" fill="currentColor"/></svg>
+          <span class="ml-4"> Registrarme con Facebook</span>
+        </div>
+      </button>
+      <a routerLink="/autorizacion/registro"  class=" text-blue-400 transition mb-4">Registrarse</a>
+  </div>
+</form>

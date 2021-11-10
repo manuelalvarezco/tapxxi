@@ -1,0 +1,71 @@
+.overlay{
+  background:rgba(0,0,0,.5);
+  position:fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  visibility:hidden;
+  transition:.7s ease-in;
+
+  &.active{
+    opacity:1;
+    visibility:visible;
+  }
+}
+
+.modal{
+  width:400px;
+  background:white;
+  position:relative;
+  animation:fadeIn .5s forwards;
+  padding:2em;
+  border-radius:.5em;
+  text-align:center;
+}
+
+@keyframes fadeIn{
+  0%{
+    transform:translateY(-3000px);
+  }
+  60%{
+
+    transform:translateY(25px);
+  }
+  75%{
+    tranform:translateY(-10px);
+  }
+  100%{
+    tranform:translateY(5px);
+  }
+}
+
+@keyframes fadeOut{
+
+  0%{
+    tranform:translateY(5px);
+  }
+  60%{
+    tranform:translateY(-10px);
+  }
+  75%{
+
+    transform:translateY(25px);
+  }
+
+  100%{
+    transform:translateY(-3000px);
+  }
+
+}
+
+.start{
+  color: rgba(229, 231, 235, 1);
+  &.active{
+    color:#f1a803;
+  }
+}
